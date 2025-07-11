@@ -37,30 +37,46 @@
   }
 </script>
 
-<h1 class="library-title">Book calculator</h1>
-<div class="book-form">
-  <div class="page">
-    <input
-      type="number"
-      bind:value={pageStart}
-      placeholder="Pagina de inicio"
-    />
-    <input type="number" bind:value={pageEnd} placeholder="Pagina de fin" />
-  </div>
-  <div class="separator"></div>
-  <!-- Separator updated -->
-  <div class="page">
-    <input type="number" bind:value={pageCurrent} placeholder="Pagina actual" />
-    <input
-      type="text"
-      disabled
-      bind:value={pageProgress}
-      placeholder="Progreso"
-    />
+<div class="container">
+  <h1 class="library-title">Book calculator</h1>
+  <div class="book-form">
+    <div class="page">
+      <input
+        type="number"
+        bind:value={pageStart}
+        placeholder="Pagina de inicio"
+      />
+      <input type="number" bind:value={pageEnd} placeholder="Pagina de fin" />
+    </div>
+    <div class="separator"></div>
+    <!-- Separator updated -->
+    <div class="page">
+      <input
+        type="number"
+        bind:value={pageCurrent}
+        placeholder="Pagina actual"
+      />
+      <input
+        type="text"
+        disabled
+        bind:value={pageProgress}
+        placeholder="Progreso"
+      />
+    </div>
   </div>
 </div>
 
 <style>
+  .container {
+    background-color: #fffbd2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .library-title {
     font-family: "Georgia", serif;
     font-size: 2.5rem;
